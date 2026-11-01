@@ -1,0 +1,8 @@
+{
+  "entry": "client/dist/index.html",
+  "managedCronJobs": [],
+  "name": "볼테어 같은 금고 앱",
+  "platformVersion": 26,
+  "runtime": "typescript",
+  "slug": "space"
+}

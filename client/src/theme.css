@@ -1,0 +1,73 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Your+Font:wght@400..700&display=swap'); */
+@import "tailwindcss";
+@import "tailwindcss-safe-area";
+
+@theme {
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-lg: 18px;
+  --text-lg--line-height: 28px;
+  --text-xl: 20px;
+  --text-xl--line-height: 28px;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 32px;
+  --text-3xl: 30px;
+  --text-3xl--line-height: 36px;
+  --text-4xl: 36px;
+  --text-4xl--line-height: 40px;
+  --text-5xl: 48px;
+  --text-5xl--line-height: 52px;
+}
+
+:root {
+  color-scheme: light dark;
+  /* Machined steel, daylight side: pale brushed metal and bone. */
+  --bg: #e9e5db;
+  --surface: #f6f3ec;
+  --surface-2: #efeade;
+  --text: #1d1a13;
+  --dim: #6f6a5c;
+  --border: #d5cfbf;
+  --accent: #9a7b1c;
+  --accent-strong: #7d6314;
+  --danger: #b4453c;
+  --radius: 10px;
+  --space-surface: var(--surface);
+  --space-surface-alt: var(--surface-2);
+  --space-muted: var(--dim);
+  --space-border: var(--border);
+  --space-accent: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* The vault at night: ink-black steel, brass fittings. */
+    --bg: #101014;
+    --surface: #1b1b21;
+    --surface-2: #232329;
+    --text: #ece9e2;
+    --dim: #9b968a;
+    --border: #33323a;
+    --accent: #c9a227;
+    --accent-strong: #e3bc3a;
+    --danger: #d06a5f;
+  }
+}
+
+/* A wrong pattern rattles the pad like a safe handle that won't turn. */
+@keyframes vault-shake {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(3px); }
+  30%, 50%, 70% { transform: translateX(-5px); }
+  40%, 60% { transform: translateX(5px); }
+}
+.shake {
+  animation: vault-shake 0.45s ease both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .shake { animation: none; }
+}
